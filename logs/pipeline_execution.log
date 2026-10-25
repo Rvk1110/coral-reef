@@ -1,0 +1,12 @@
+2026-10-25 19:30:37 [INFO] ===========================================================================
+2026-10-25 19:30:37 [INFO] REEF BIOACOUSTICS PIPELINE: ECOACOUSTIC INDICES vs YAMNET vs SURFPERCH
+2026-10-25 19:30:37 [INFO] Mode: manifest | Classification: 4class | Random Seed: 42
+2026-10-25 19:30:37 [INFO] ===========================================================================
+2026-10-25 19:30:37 [INFO] Step 1: Checking/generating 5-second segment manifest...
+2026-10-25 19:30:37 [INFO] Generated segment manifest: 1440 segments from C:\Users\Administrator\coral-reef\EcoSound-Audit\data\sampling\sampled_recordings.csv -> C:\Users\Administrator\coral-reef\EcoSound-Audit\data\sampling\segment_manifest.csv
+2026-10-25 19:30:37 [INFO] Master segment manifest ready: 1440 segments across 12 sites.
+2026-10-25 19:30:37 [INFO] No cached feature file found at C:\Users\Administrator\coral-reef\EcoSound-Audit\data\features\features_maad.npz.
+2026-10-25 19:30:37 [INFO] To extract full features from remote audio on GPU, use the Colab pipeline notebook.
+2026-10-25 19:30:37 [INFO] ===========================================================================
+2026-10-25 19:30:37 [INFO] Pipeline execution step finished successfully.
+2026-10-25 19:30:37 [INFO] ===========================================================================

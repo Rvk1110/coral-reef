@@ -1,0 +1,96 @@
+# ==============================================================================
+# Reef Bioacoustics Pipeline Configuration
+# Ecoacoustic Indices vs YAMNet vs SurfPerch
+# ==============================================================================
+
+pipeline:
+  name: "reef_bioacoustics_benchmark"
+  random_seed: 42
+  version: "1.0.0"
+
+paths:
+  # Metadata & sampling
+  site_metadata_csv: "data/sampling/site_metadata.csv"
+  sampled_recordings_csv: "data/sampling/sampled_recordings.csv"
+  manifest_csv: "data/manifests/manifest.csv"
+  figshare_files_json: "data/manifests/figshare_files.json"
+  
+  # Segment manifest and feature cache
+  segment_manifest_csv: "data/sampling/segment_manifest.csv"
+  features_dir: "data/features"
+  
+  # Outputs and logs
+  results_dir: "results"
+  figures_dir: "results/figures"
+  logs_dir: "logs"
+  pipeline_log: "logs/pipeline_execution.log"
+
+audio:
+  segment_duration_s: 5.0
+  min_file_duration_s: 50.0
+  nominal_file_duration_s: 60.0
+  target_segments_per_file: 12
+  sample_rate_native: 16000
+  sample_rate_yamnet: 16000
+  sample_rate_surfperch: 32000
+  sample_rate_maad: 16000
+
+labels:
+  # Classification mode: '4class' (native D, H, N, R) or '3class' (Degraded, Healthy, Restoration)
+  default_mode: "4class"
+  native_classes: ["D", "H", "N", "R"]
+  class_3_mapping:
+    "D": "Degraded"
+    "H": "Healthy"
+    "N": "Restoration"
+    "R": "Restoration"
+  class_names_4:
+    "D": "Degraded"
+    "H": "Healthy"
+    "N": "Early-stage Restored (<3mo)"
+    "R": "Mid-stage Restored (32-53mo)"
+
+features:
+  maad:
+    nperseg: 1024
+    noverlap: 512
+    mode: "psd"
+    flim_antroPh: [1000, 2000]
+    flim_bioPh: [2000, 8000]
+    fmax: 8000
+    bin_step: 1000
+    expected_dim: 5
+    feature_names: ["ACI", "NDSI", "ADI", "BI", "AEI"]
+
+  yamnet:
+    hub_url: "https://tfhub.dev/google/yamnet/1"
+    expected_sample_rate: 16000
+    expected_dim: 1024
+    pooling: "mean"
+
+  surfperch:
+    kaggle_handle: "google/surfperch/tensorFlow2/default"
+    expected_sample_rate: 32000
+    window_samples: 160000  # 5.0 s * 32,000 Hz
+    expected_dim: 1280
+    pooling: "mean"
+
+classifier:
+  family: "logistic_regression"
+  penalty: "l2"
+  solver: "lbfgs"
+  max_iter: 1000
+  class_weight: "balanced"
+  c_grid: [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0, 100.0]
+  random_seed: 42
+
+evaluation:
+  in_domain_cv_folds: 3
+  group_by: "site_id"
+  bootstrap_iterations: 1000
+  ci_level: 0.95
+
+robustness:
+  downsample_hz: 8000
+  bit_depth: 8
+  snr_levels_db: [20, 10, 0, -10]

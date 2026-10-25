@@ -1,0 +1,8 @@
+{
+  "status": "SKIPPED_NO_BENTHIC_GROUND_TRUTH",
+  "reason": "No continuous benthic ecological measurements (e.g. live coral cover %, structural rugosity, fish biomass) exist in the Figshare dataset metadata (Williams & Jones 2025; DOI: 10.5522/04/29958062.v2). The dataset provides categorical habitat codes (D, H, N, R) only. Per Brief Section 4.4 hard rules, the correlation step is skipped without substituting synthetic or proxy data.",
+  "spearman_rho": null,
+  "p_value": null,
+  "num_sites": 0,
+  "site_rti_values": {}
+}
