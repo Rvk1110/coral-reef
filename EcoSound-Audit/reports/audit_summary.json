@@ -1,0 +1,574 @@
+{
+  "schema_version": "1.0",
+  "audit_timestamp_utc": "2026-10-25T04:57:39.520683+00:00",
+  "phase": "Phase 1 \u2013 Dataset Audit",
+  "project": "Site-Invariant Reef Soundscape Embeddings for Zero-Shot Restoration Monitoring",
+  "dataset": {
+    "doi": "10.5522/04/29958062.v2",
+    "article_id": 29958062,
+    "title": "Coral Reef Soundscapes from a Global Restoration Programme",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "published": "2025-09-24",
+    "version": 2,
+    "total_size_bytes": 565854054232,
+    "total_size_tb": 0.566
+  },
+  "audit_a_metadata": {
+    "status": "success",
+    "total_file_entries_in_api": 52,
+    "audio_site_archives": 45,
+    "detection_archives": 5,
+    "other_files": 2,
+    "md5_mismatches": [],
+    "md5_unverified_archives": [
+      "ind_R1.zip",
+      "detections_indonesia.zip"
+    ]
+  },
+  "audit_bc_geography": {
+    "status": "success",
+    "countries_verified": [
+      "australia",
+      "indonesia",
+      "kenya",
+      "maldives",
+      "mexico"
+    ],
+    "country_count": 5,
+    "total_audio_site_archives": 45,
+    "country_summary": {
+      "australia": {
+        "site_count": 7,
+        "site_codes": [
+          "D1",
+          "D2",
+          "D3",
+          "H1",
+          "H2",
+          "H3",
+          "R1"
+        ],
+        "total_files": 96502,
+        "total_gb": 185.3
+      },
+      "indonesia": {
+        "site_count": 21,
+        "site_codes": [
+          "D1",
+          "D2",
+          "D3",
+          "D4",
+          "D5",
+          "D6",
+          "H1",
+          "H2",
+          "H3",
+          "H4",
+          "H5",
+          "H6",
+          "N1",
+          "N2",
+          "N3",
+          "R1",
+          "R2",
+          "R3",
+          "R4",
+          "R5",
+          "R6"
+        ],
+        "total_files": 273175,
+        "total_gb": 524.3
+      },
+      "kenya": {
+        "site_count": 5,
+        "site_codes": [
+          "D1",
+          "D2",
+          "H1",
+          "H2",
+          "N1"
+        ],
+        "total_files": 41875,
+        "total_gb": 80.4
+      },
+      "maldives": {
+        "site_count": 5,
+        "site_codes": [
+          "D1",
+          "D2",
+          "H1",
+          "H2",
+          "N1"
+        ],
+        "total_files": 57128,
+        "total_gb": 109.7
+      },
+      "mexico": {
+        "site_count": 7,
+        "site_codes": [
+          "D1",
+          "D2",
+          "H1",
+          "H2",
+          "H3",
+          "N1",
+          "R1"
+        ],
+        "total_files": 73507,
+        "total_gb": 141.2
+      }
+    },
+    "habitat_code_summary": {
+      "D": {
+        "site_count": 15,
+        "countries": [
+          "australia",
+          "indonesia",
+          "kenya",
+          "maldives",
+          "mexico"
+        ],
+        "sites": [
+          "D1",
+          "D2",
+          "D3",
+          "D1",
+          "D2",
+          "D3",
+          "D4",
+          "D5",
+          "D6",
+          "D1",
+          "D2",
+          "D1",
+          "D2",
+          "D1",
+          "D2"
+        ]
+      },
+      "H": {
+        "site_count": 16,
+        "countries": [
+          "australia",
+          "indonesia",
+          "kenya",
+          "maldives",
+          "mexico"
+        ],
+        "sites": [
+          "H1",
+          "H2",
+          "H3",
+          "H1",
+          "H2",
+          "H3",
+          "H4",
+          "H5",
+          "H6",
+          "H1",
+          "H2",
+          "H1",
+          "H2",
+          "H1",
+          "H2",
+          "H3"
+        ]
+      },
+      "R": {
+        "site_count": 8,
+        "countries": [
+          "australia",
+          "indonesia",
+          "mexico"
+        ],
+        "sites": [
+          "R1",
+          "R1",
+          "R2",
+          "R3",
+          "R4",
+          "R5",
+          "R6",
+          "R1"
+        ]
+      },
+      "N": {
+        "site_count": 6,
+        "countries": [
+          "indonesia",
+          "kenya",
+          "maldives",
+          "mexico"
+        ],
+        "sites": [
+          "N1",
+          "N2",
+          "N3",
+          "N1",
+          "N1",
+          "N1"
+        ]
+      }
+    }
+  },
+  "audit_d_audio": {
+    "status": "documented_only",
+    "source": "Figshare article description (Williams et al., 2025)",
+    "note": "No audio files were downloaded or decoded during Phase 1. Properties below are taken verbatim from the dataset documentation. They have not been independently verified against actual file headers.",
+    "file_format": "WAV",
+    "file_extension": ".wav",
+    "sample_rate_hz": 16000,
+    "sample_rate_source": "Dataset description: 'sampled at 16 kHz'",
+    "channels": "unknown \u2013 not stated in documentation",
+    "bit_depth": "unknown \u2013 not stated in documentation",
+    "duration_per_recording_minutes": 1,
+    "duration_source": "Dataset description: '1-minute HydroMoth recordings'",
+    "approx_size_per_file_mb": 1.83,
+    "size_source": "Dataset description: '1.83 MB per .WAV'",
+    "recorder_model": "HydroMoth (Open Acoustic Devices)",
+    "recorder_source": "Dataset description",
+    "duty_cycle_default": "1-in-4 minutes (15 min/hr recording)",
+    "duty_cycle_indonesia": "1-in-2 minutes (30 min/hr recording)",
+    "duty_cycle_source": "Dataset description",
+    "filename_pattern": "country_site_YYYYMMDD_HHMMSS.wav",
+    "filename_timestamp": "local time (Audiomoth standard)",
+    "filename_example": "aus_D1_20230207_120400.wav",
+    "filename_source": "Dataset description \u2013 file naming scheme section",
+    "unverified_properties": [
+      "channels (mono vs stereo)",
+      "bit depth / sample encoding",
+      "actual sample rate across all sites",
+      "whether all files are exactly 60 seconds",
+      "whether duty cycle differs further across countries"
+    ],
+    "planned_verification": "Phase 2 should inspect WAV headers from at least one file per country using a lightweight tool (e.g., soxi or soundfile.info) on a small remote-downloaded sample before full processing."
+  },
+  "audit_e_counts": {
+    "status": "success",
+    "total_files_all_sites": 542187,
+    "approx_total_recorded_hours": 9036.5,
+    "approx_total_recorded_days": 376.5,
+    "exactness": "File counts per site are read directly from manifest.csv and are exact as stated by the dataset authors. Total duration is an approximation assuming all files are exactly 1 minute; a small number may be shorter.",
+    "country_counts": {
+      "australia": {
+        "files": 96502,
+        "sites": 7,
+        "approx_hours": 0.0,
+        "approx_recorded_hours": 1608.4,
+        "approx_calendar_hours": 6433.5,
+        "duty_cycle_fraction": 0.25
+      },
+      "indonesia": {
+        "files": 273175,
+        "sites": 21,
+        "approx_hours": 0.0,
+        "approx_recorded_hours": 4552.9,
+        "approx_calendar_hours": 9105.8,
+        "duty_cycle_fraction": 0.5
+      },
+      "kenya": {
+        "files": 41875,
+        "sites": 5,
+        "approx_hours": 0.0,
+        "approx_recorded_hours": 697.9,
+        "approx_calendar_hours": 2791.7,
+        "duty_cycle_fraction": 0.25
+      },
+      "maldives": {
+        "files": 57128,
+        "sites": 5,
+        "approx_hours": 0.0,
+        "approx_recorded_hours": 952.1,
+        "approx_calendar_hours": 3808.5,
+        "duty_cycle_fraction": 0.25
+      },
+      "mexico": {
+        "files": 73507,
+        "sites": 7,
+        "approx_hours": 0.0,
+        "approx_recorded_hours": 1225.1,
+        "approx_calendar_hours": 4900.5,
+        "duty_cycle_fraction": 0.25
+      }
+    },
+    "habitat_counts": {
+      "D": {
+        "files": 198292,
+        "sites": 15
+      },
+      "H": {
+        "files": 179445,
+        "sites": 16
+      },
+      "R": {
+        "files": 118423,
+        "sites": 8
+      },
+      "N": {
+        "files": 46027,
+        "sites": 6
+      }
+    }
+  },
+  "audit_f_schedule": {
+    "status": "documented_only",
+    "source": "Figshare article description and preprint abstract (Williams et al., 2025)",
+    "recording_date_range": "October 2021 \u2013 June 2023",
+    "recording_duration_per_site": "approximately 1 month per site",
+    "duty_cycle": {
+      "default": "1-in-4 minutes (recordings at 0, 4, 8, ... minutes each hour)",
+      "indonesia": "1-in-2 minutes (recordings at 0, 2, 4, ... minutes each hour)",
+      "source": "Dataset description"
+    },
+    "timestamp_format": "YYYYMMDD_HHMMSS (Audiomoth/HydroMoth standard)",
+    "timestamp_timezone": "local time at each site",
+    "known_confounders": [
+      {
+        "confounder": "Duty cycle difference",
+        "description": "Indonesia recorded at 1-in-2 minute intervals while all other countries used 1-in-4. This doubles the temporal density of Indonesia data, which could bias any per-file or per-minute comparison.",
+        "severity": "High \u2013 must be accounted for in any cross-country comparison"
+      },
+      {
+        "confounder": "Date range heterogeneity",
+        "description": "Data collected October 2021 \u2013 June 2023. Sites may have been recorded in different seasons or years, introducing temporal confounds (seasonal soundscape variation, weather events).",
+        "severity": "Moderate \u2013 requires timestamp inspection to quantify"
+      },
+      {
+        "confounder": "Single recorder per site",
+        "description": "Each site has one HydroMoth deployment. Recorder position, depth, and orientation could vary between sites, confounding cross-site comparisons.",
+        "severity": "Moderate \u2013 recorder placement details not available in metadata"
+      },
+      {
+        "confounder": "Biogeographic region",
+        "description": "Five biogeographically distinct regions. Country and biogeographic region are perfectly confounded: any country effect cannot be attributed solely to habitat type without controlling for region.",
+        "severity": "High \u2013 fundamental to experimental design"
+      },
+      {
+        "confounder": "Recorder battery end-of-life",
+        "description": "Documentation notes 'a tiny number are of a reduced size as recorder batteries reached end of life.' These files may be shorter than 1 minute.",
+        "severity": "Low \u2013 described as rare; confirm count in Phase 2"
+      }
+    ],
+    "unresolved_schedule_questions": [
+      "Exact deployment dates per site (not in manifest).",
+      "Whether local-time timestamps allow reliable UTC alignment across regions.",
+      "Whether different sites within the same country were recorded simultaneously or sequentially.",
+      "Whether any site had recording gaps (equipment failure, maintenance)."
+    ]
+  },
+  "audit_g_ecological_measurements": {
+    "status": "not_found_in_dataset",
+    "source": "Figshare article description, manifest.csv, and preprint abstract",
+    "findings": "No independent ecological measurements (coral cover, fish abundance, species richness, restoration age in continuous form, habitat complexity indices) are present in the Figshare dataset files. The dataset contains: (1) raw audio archives, (2) sonotype detection clips, (3) a site manifest, and (4) a KML map. None include tabular ecological data.",
+    "habitat_label_is_not_ecological_measurement": "The four habitat labels (D, H, N, R) encode categorical restoration stages, not continuous ecological measurements. They cannot substitute for independently measured variables such as coral cover percentage or fish biomass.",
+    "associated_study_note": "The preprint (Williams et al., 2025, doi:10.1101/2025.09.24.678197) discusses ecosystem functions inferred from acoustic detections (fish diversity, recruitment cuescape, herbivory, bioturbation), but these are derived outputs from the same acoustic data, not independent ecological measurements.",
+    "restoration_age": {
+      "available": "partial",
+      "description": "The labels encode ordinal restoration stage: N = early-stage (<3 months), R = mid-stage (32\u201353 months). These are categorical ranges, not continuous measured ages. Exact restoration start dates per site are not in the dataset."
+    },
+    "recommendation": "If correlation with ecological state is needed in later phases, researchers must obtain independent ecological data (e.g., coral cover, fish surveys) from the MARRS project partners for each of the 45 sites. Do NOT treat habitat labels as continuous ecological ground truth."
+  },
+  "audit_h_quality": {
+    "status": "partial",
+    "issues_verified_from_metadata": [],
+    "issues_suspected_from_documentation": [
+      "Empty computed_md5 for 2 archives (ind_R1.zip and detections_indonesia.zip). These have not been verified by Figshare's own checksumming pipeline.",
+      "A small number of WAV files are shorter than 1 minute due to recorder battery depletion (noted in dataset documentation). Exact count unknown.",
+      "Unusually small file counts (< 5000 files) for: ['ind_H4.zip', 'ind_H5.zip', 'ind_N1.zip', 'ind_N2.zip', 'ind_N3.zip', 'ken_D1.zip', 'ken_H1.zip']. Min = 1060, Max = 17921, ratio = 16.9x. These may represent shorter deployments or partial archives."
+    ],
+    "checks_not_performed_in_phase1": [
+      "Duplicate WAV filenames within archives \u2013 requires archive listing or download.",
+      "Duplicate timestamps within a site \u2013 requires archive content inspection.",
+      "Silent or near-silent recordings \u2013 requires audio decoding.",
+      "Actual sample rate, channels, and bit depth verification \u2013 requires WAV header reading.",
+      "Exact count of shortened battery-depleted files \u2013 requires archive listing."
+    ],
+    "data_integrity_note": "Only 2 of 52 Figshare files have empty computed_md5 fields: ind_R1.zip and detections_indonesia.zip. All other files have matching supplied and computed MD5s, indicating successful upload verification. The empty fields suggest those two uploads were still being checksummed or experienced a processing issue at time of API query."
+  },
+  "audit_i_feasibility": {
+    "status": "success",
+    "total_sites": 45,
+    "countries": [
+      "australia",
+      "indonesia",
+      "kenya",
+      "maldives",
+      "mexico"
+    ],
+    "habitat_labels_found": [
+      "D",
+      "H",
+      "N",
+      "R"
+    ],
+    "habitat_country_distribution": {
+      "D": {
+        "australia": 3,
+        "indonesia": 6,
+        "kenya": 2,
+        "maldives": 2,
+        "mexico": 2
+      },
+      "H": {
+        "australia": 3,
+        "indonesia": 6,
+        "kenya": 2,
+        "maldives": 2,
+        "mexico": 3
+      },
+      "R": {
+        "australia": 1,
+        "indonesia": 6,
+        "mexico": 1
+      },
+      "N": {
+        "indonesia": 3,
+        "kenya": 1,
+        "maldives": 1,
+        "mexico": 1
+      }
+    },
+    "label_concentration_warnings": [],
+    "australia_habitat_codes_present": [
+      "D",
+      "H",
+      "R"
+    ],
+    "in_domain_evaluation": {
+      "feasible": true,
+      "note": "45 sites provide reasonable within-dataset evaluation. Splits must be at site level (not segment or recording level) to avoid leakage."
+    },
+    "leave_one_site_out": {
+      "feasible": true,
+      "note": "Site-level LOO is possible but leaves at most ~1 site per fold. Habitat classes must be present in remaining training sites. Small-count sites (ken_H1: 1060 files) may produce unstable estimates."
+    },
+    "leave_one_country_out": {
+      "feasible": "partial",
+      "note": "Leave-one-country-out (LOCO) is the strongest geographic generalisation test. However: (1) Australia has NO early-stage-restored (N) sites, so LOCO-Australia cannot test N-class performance on Australian data. (2) Kenya has only 1 H site (ken_H1) and only 5 total sites, limiting its power as a held-out test region for all four classes. (3) Maldives has no R (mid-stage restored) sites. (4) Mexico has no D-label sites \u2014 wait, per manifest it does: mex_D1, mex_D2. Full LOCO feasibility per label must be checked per country carefully.",
+      "country_habitat_gaps": {
+        "australia": {
+          "present_labels": [
+            "D",
+            "H",
+            "R"
+          ],
+          "missing_labels": [
+            "N"
+          ]
+        },
+        "kenya": {
+          "present_labels": [
+            "D",
+            "H",
+            "N"
+          ],
+          "missing_labels": [
+            "R"
+          ]
+        },
+        "maldives": {
+          "present_labels": [
+            "D",
+            "H",
+            "N"
+          ],
+          "missing_labels": [
+            "R"
+          ]
+        }
+      }
+    },
+    "class_imbalance": {
+      "note": "Indonesia dominates by file count (~195k files vs ~13\u201318k for other countries). This is partly due to the 1-in-2 duty cycle vs 1-in-4. Any unweighted training procedure will over-represent Indonesia.",
+      "recommendation": "Stratify by site, not by file count, when constructing training sets. Consider per-site normalisation."
+    },
+    "site_label_confounding": {
+      "status": "confirmed",
+      "note": "Each site has exactly one habitat label (verified from naming convention). Site identity and habitat label are perfectly correlated within a country. Habitat-level classification from recordings always risks site-level leakage if the split is not strictly at the site level."
+    },
+    "leakage_risk_explanation": "Data leakage risk: If 5-second segments are extracted from 1-minute recordings and the train/test split is performed at the segment level (not the site or recording level), multiple segments from the same recording or the same site will appear in both training and testing. Because segments from the same recording share identical background noise, recorder characteristics, and habitat, a classifier can exploit these shared low-level features rather than learning generalisable habitat-level representations. This would inflate reported performance without reflecting true out-of-distribution generalisation.",
+    "recommended_split_unit": "site"
+  },
+  "audit_j_sampling": {
+    "status": "recommendation_only",
+    "phase_boundary": "No sampling performed in Phase 1.",
+    "recommended_approach": {
+      "unit": "1-minute WAV file (one recording per unit)",
+      "stratification": [
+        "Sample proportionally across all 45 verified sites.",
+        "Represent each site's full recording period by sampling across dates and times.",
+        "Preserve balance across the four habitat labels.",
+        "Ensure representation across countries proportional to the research question."
+      ],
+      "pilot_first": "Before full extraction, run a pilot on one small archive per country (e.g., ken_H1.zip at ~0.9 GB) to verify WAV format, sample rate, channels, and timestamp parsing before committing compute time.",
+      "metadata_to_preserve": [
+        "Source archive name (e.g., aus_D1.zip)",
+        "Original WAV filename (e.g., aus_D1_20230207_120400.wav)",
+        "Country code",
+        "Site code",
+        "Habitat label code",
+        "Date (YYYYMMDD)",
+        "Time of day (HHMMSS)",
+        "Timestamp timezone (local)"
+      ],
+      "split_unit": "site (NOT recording, NOT segment)",
+      "random_seed": 42,
+      "remote_storage": "Given 8 GB RAM and 256 GB SSD, all large-scale processing should be done on Google Colab or another cloud runtime with GCS/Drive for storage. Only manifests and small pilot samples should be kept locally.",
+      "duty_cycle_note": "Account for the 1-in-2 vs 1-in-4 duty cycle difference when calculating per-unit-time statistics. Do not compare raw file counts between Indonesia and other countries without normalising for duty cycle."
+    },
+    "do_not_commit_to_fixed_count": "The exact number of recordings to sample per site should be determined in Phase 2 after verifying actual archive contents and confirming that the pilot WAV headers match documentation. The manifest file_count values are the best available guide (range: 1,060 \u2013 17,921 per site).",
+    "indonesia_note": "Indonesia has 21 sites and ~195,000 files, representing >40% of the total dataset. Consider whether to cap Indonesia's contribution to avoid geographic dominance."
+  },
+  "unresolved_decisions_requiring_researcher_approval": [
+    {
+      "id": "UD-01",
+      "question": "How should the Indonesia duty-cycle difference be handled in cross-country comparisons?",
+      "options": [
+        "Normalise by dividing Indonesia file counts by 2 to match other countries.",
+        "Subsample Indonesia to match per-hour coverage of other countries.",
+        "Report results separately for Indonesia and treat it as a distinct analysis.",
+        "Accept the imbalance and report it as a limitation."
+      ]
+    },
+    {
+      "id": "UD-02",
+      "question": "How should the four habitat labels (D, H, N, R) be used in the classification experiment?",
+      "options": [
+        "Use all four as separate classes (4-class problem).",
+        "Merge N and R into a single 'Restored' class (3-class problem). REQUIRES methodological justification.",
+        "Use only a subset of labels for a specific research question."
+      ],
+      "warning": "Do NOT silently merge labels without explicit approval."
+    },
+    {
+      "id": "UD-03",
+      "question": "Australia has no early-stage-restored (N) sites and Maldives has no mid-stage-restored (R) sites. How should LOCO evaluation handle missing habitat classes?",
+      "options": [
+        "Exclude the missing class from the evaluation for that country.",
+        "Exclude countries with missing classes from LOCO entirely.",
+        "Accept that LOCO is partial and report which classes are testable per country."
+      ]
+    },
+    {
+      "id": "UD-04",
+      "question": "What is the minimum recording sample per site for Phase 2 processing?",
+      "context": "Site file counts range from 1,060 (ken_H1) to 17,921 (ind_D5). A fixed sample per site caps the total dataset size.",
+      "recommendation": "Defer decision until pilot audio header inspection confirms file properties."
+    },
+    {
+      "id": "UD-05",
+      "question": "Should independent ecological measurements (coral cover, fish surveys) be sought from MARRS project partners?",
+      "context": "No such data exists in the Figshare dataset. Obtaining it would enable correlation analysis but requires coordination with dataset authors."
+    },
+    {
+      "id": "UD-06",
+      "question": "ind_R1.zip and detections_indonesia.zip have empty computed_md5 in Figshare API. How should this be handled?",
+      "options": [
+        "Verify manually after download using the supplied_md5 and sha256 in manifest.",
+        "Contact dataset authors to confirm upload integrity.",
+        "Proceed and flag as a known data quality issue."
+      ]
+    }
+  ]
+}

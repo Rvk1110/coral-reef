@@ -1,0 +1,60 @@
+# ============================================================
+# EcoSound-Audit — Phase 2 Configuration: Manifest & Sampling
+# ============================================================
+pipeline:
+  name: "ecosound_phase2_sampling"
+  random_seed: 42
+  version: "1.0.0"
+
+dataset:
+  article_id: 29958062
+  doi: "10.5522/04/29958062.v2"
+  api_url: "https://api.figshare.com/v2/articles/29958062"
+  manifest_file_id: 57340871
+  kml_file_id: 57543862
+
+paths:
+  manifest_csv: "data/manifests/manifest.csv"
+  figshare_files_json: "data/manifests/figshare_files.json"
+  study_sites_kml: "data/manifests/study_sites_map.kml"
+  output_dir: "data/sampling"
+  site_metadata_csv: "data/sampling/site_metadata.csv"
+  recording_manifest_csv: "data/sampling/recording_manifest.csv"
+  split_metadata_csv: "data/sampling/site_splits.csv"
+  sampled_dataset_csv: "data/sampling/sampled_recordings.csv"
+  sampling_summary_json: "reports/sampling_summary.json"
+  pipeline_log: "logs/sampling_pipeline.log"
+
+sampling:
+  # Sampling strategies available:
+  # "uniform_temporal": stratified across time bins (hour of day & deployment date) per site
+  strategy: "uniform_temporal"
+  # Target number of recordings per site (balanced across sites).
+  # Sites with fewer recordings will sample all available recordings.
+  target_samples_per_site: 100
+  # For pilot evaluation / fast reproducible testing:
+  pilot_samples_per_site: 10
+  # Indonesia duty cycle handling:
+  # Indonesia recordings are every 2 min (30/hr) vs every 4 min (15/hr) elsewhere.
+  # To avoid acoustic over-density from Indonesia, indonesia_subsample_ratio can be set to 0.5
+  # to match temporal interval (effectively taking 1-in-4 min), or "hourly_binning" to select
+  # equal samples per diurnal hour across all sites regardless of duty cycle.
+  duty_cycle_handling: "hourly_binning"
+  # Minimum recording duration (seconds) to retain; filters out battery-depleted cutoff files
+  min_duration_seconds: 50.0
+
+splits:
+  # Strict site-level separation to prevent data leakage.
+  # No site appears in more than one split!
+  # Recommended 5-fold cross-validation or Train/Val/Test
+  train_ratio: 0.60
+  val_ratio: 0.20
+  test_ratio: 0.20
+  # Habitat labels must all be preserved
+  preserved_habitat_labels:
+    - "D"
+    - "H"
+    - "N"
+    - "R"
+  # Support Leave-One-Country-Out (LOCO) evaluation folds
+  enable_loco: true

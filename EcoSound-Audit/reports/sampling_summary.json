@@ -1,0 +1,717 @@
+{
+  "pipeline_timestamp_utc": "2026-10-25T09:12:12.457640+00:00",
+  "random_seed": 42,
+  "pilot_mode": true,
+  "target_samples_per_site": 10,
+  "duty_cycle_handling": "hourly_binning",
+  "total_sites_in_dataset": 45,
+  "sampled_sites_count": 12,
+  "unsampled_sites_count": 33,
+  "total_sampled_recordings": 120,
+  "all_45_sites_split_distribution": {
+    "train_sites_count": 25,
+    "val_sites_count": 8,
+    "test_sites_count": 12,
+    "habitat_coverage_all_sites": {
+      "train": {
+        "classes_present": [
+          "D",
+          "H",
+          "N",
+          "R"
+        ],
+        "counts_by_class": {
+          "D": 8,
+          "H": 8,
+          "R": 6,
+          "N": 3
+        },
+        "all_four_classes_present": true
+      },
+      "val": {
+        "classes_present": [
+          "D",
+          "H",
+          "N",
+          "R"
+        ],
+        "counts_by_class": {
+          "D": 2,
+          "H": 3,
+          "N": 2,
+          "R": 1
+        },
+        "all_four_classes_present": true
+      },
+      "test": {
+        "classes_present": [
+          "D",
+          "H",
+          "N",
+          "R"
+        ],
+        "counts_by_class": {
+          "D": 5,
+          "H": 5,
+          "N": 1,
+          "R": 1
+        },
+        "all_four_classes_present": true
+      }
+    }
+  },
+  "sampled_recordings_split_distribution": {
+    "train_recordings_count": 60,
+    "val_recordings_count": 40,
+    "test_recordings_count": 20,
+    "habitat_coverage_sampled": {
+      "train": {
+        "classes_present": [
+          "H",
+          "N",
+          "R"
+        ],
+        "counts_by_class": {
+          "R": 30,
+          "H": 10,
+          "N": 20
+        },
+        "all_four_classes_present": false,
+        "limitations": "Missing classes in train sample: ['D']"
+      },
+      "val": {
+        "classes_present": [
+          "D",
+          "H",
+          "N"
+        ],
+        "counts_by_class": {
+          "D": 10,
+          "H": 10,
+          "N": 20
+        },
+        "all_four_classes_present": false,
+        "limitations": "Missing classes in val sample: ['R']"
+      },
+      "test": {
+        "classes_present": [
+          "D",
+          "H"
+        ],
+        "counts_by_class": {
+          "H": 10,
+          "D": 10
+        },
+        "all_four_classes_present": false,
+        "limitations": "Missing classes in test sample: ['N', 'R']"
+      }
+    }
+  },
+  "sampled_sites": [
+    "australia_D1",
+    "australia_H2",
+    "australia_R1",
+    "indonesia_H4",
+    "indonesia_N1",
+    "indonesia_R1",
+    "kenya_H1",
+    "kenya_N1",
+    "maldives_D1",
+    "maldives_N1",
+    "mexico_N1",
+    "mexico_R1"
+  ],
+  "unsampled_sites": [
+    {
+      "site_id": "australia_D2",
+      "country": "australia",
+      "habitat_label": "D",
+      "split": "train",
+      "file_count": 14084
+    },
+    {
+      "site_id": "australia_D3",
+      "country": "australia",
+      "habitat_label": "D",
+      "split": "test",
+      "file_count": 14058
+    },
+    {
+      "site_id": "australia_H1",
+      "country": "australia",
+      "habitat_label": "H",
+      "split": "test",
+      "file_count": 13664
+    },
+    {
+      "site_id": "australia_H3",
+      "country": "australia",
+      "habitat_label": "H",
+      "split": "train",
+      "file_count": 14041
+    },
+    {
+      "site_id": "indonesia_D1",
+      "country": "indonesia",
+      "habitat_label": "D",
+      "split": "val",
+      "file_count": 15768
+    },
+    {
+      "site_id": "indonesia_D2",
+      "country": "indonesia",
+      "habitat_label": "D",
+      "split": "test",
+      "file_count": 15486
+    },
+    {
+      "site_id": "indonesia_D3",
+      "country": "indonesia",
+      "habitat_label": "D",
+      "split": "train",
+      "file_count": 15650
+    },
+    {
+      "site_id": "indonesia_D4",
+      "country": "indonesia",
+      "habitat_label": "D",
+      "split": "train",
+      "file_count": 15374
+    },
+    {
+      "site_id": "indonesia_D5",
+      "country": "indonesia",
+      "habitat_label": "D",
+      "split": "train",
+      "file_count": 17921
+    },
+    {
+      "site_id": "indonesia_D6",
+      "country": "indonesia",
+      "habitat_label": "D",
+      "split": "train",
+      "file_count": 15231
+    },
+    {
+      "site_id": "indonesia_H1",
+      "country": "indonesia",
+      "habitat_label": "H",
+      "split": "test",
+      "file_count": 16220
+    },
+    {
+      "site_id": "indonesia_H2",
+      "country": "indonesia",
+      "habitat_label": "H",
+      "split": "train",
+      "file_count": 15941
+    },
+    {
+      "site_id": "indonesia_H3",
+      "country": "indonesia",
+      "habitat_label": "H",
+      "split": "train",
+      "file_count": 16980
+    },
+    {
+      "site_id": "indonesia_H5",
+      "country": "indonesia",
+      "habitat_label": "H",
+      "split": "train",
+      "file_count": 3372
+    },
+    {
+      "site_id": "indonesia_H6",
+      "country": "indonesia",
+      "habitat_label": "H",
+      "split": "val",
+      "file_count": 15730
+    },
+    {
+      "site_id": "indonesia_N2",
+      "country": "indonesia",
+      "habitat_label": "N",
+      "split": "train",
+      "file_count": 4106
+    },
+    {
+      "site_id": "indonesia_N3",
+      "country": "indonesia",
+      "habitat_label": "N",
+      "split": "test",
+      "file_count": 4217
+    },
+    {
+      "site_id": "indonesia_R2",
+      "country": "indonesia",
+      "habitat_label": "R",
+      "split": "val",
+      "file_count": 14815
+    },
+    {
+      "site_id": "indonesia_R3",
+      "country": "indonesia",
+      "habitat_label": "R",
+      "split": "train",
+      "file_count": 15489
+    },
+    {
+      "site_id": "indonesia_R4",
+      "country": "indonesia",
+      "habitat_label": "R",
+      "split": "train",
+      "file_count": 15850
+    },
+    {
+      "site_id": "indonesia_R5",
+      "country": "indonesia",
+      "habitat_label": "R",
+      "split": "test",
+      "file_count": 16024
+    },
+    {
+      "site_id": "indonesia_R6",
+      "country": "indonesia",
+      "habitat_label": "R",
+      "split": "train",
+      "file_count": 16047
+    },
+    {
+      "site_id": "kenya_D1",
+      "country": "kenya",
+      "habitat_label": "D",
+      "split": "train",
+      "file_count": 4675
+    },
+    {
+      "site_id": "kenya_D2",
+      "country": "kenya",
+      "habitat_label": "D",
+      "split": "test",
+      "file_count": 11917
+    },
+    {
+      "site_id": "kenya_H2",
+      "country": "kenya",
+      "habitat_label": "H",
+      "split": "train",
+      "file_count": 12269
+    },
+    {
+      "site_id": "maldives_D2",
+      "country": "maldives",
+      "habitat_label": "D",
+      "split": "train",
+      "file_count": 10953
+    },
+    {
+      "site_id": "maldives_H1",
+      "country": "maldives",
+      "habitat_label": "H",
+      "split": "train",
+      "file_count": 11594
+    },
+    {
+      "site_id": "maldives_H2",
+      "country": "maldives",
+      "habitat_label": "H",
+      "split": "test",
+      "file_count": 11562
+    },
+    {
+      "site_id": "mexico_D1",
+      "country": "mexico",
+      "habitat_label": "D",
+      "split": "test",
+      "file_count": 10741
+    },
+    {
+      "site_id": "mexico_D2",
+      "country": "mexico",
+      "habitat_label": "D",
+      "split": "train",
+      "file_count": 11158
+    },
+    {
+      "site_id": "mexico_H1",
+      "country": "mexico",
+      "habitat_label": "H",
+      "split": "test",
+      "file_count": 10794
+    },
+    {
+      "site_id": "mexico_H2",
+      "country": "mexico",
+      "habitat_label": "H",
+      "split": "val",
+      "file_count": 9986
+    },
+    {
+      "site_id": "mexico_H3",
+      "country": "mexico",
+      "habitat_label": "H",
+      "split": "train",
+      "file_count": 10188
+    }
+  ],
+  "archive_sampling_breakdown": {
+    "australia_D1": {
+      "country": "australia",
+      "habitat_label": "D",
+      "split": "val",
+      "total_remote_files": 13738,
+      "sampled_files": 10,
+      "sampling_ratio": 0.0007
+    },
+    "australia_H2": {
+      "country": "australia",
+      "habitat_label": "H",
+      "split": "val",
+      "total_remote_files": 12630,
+      "sampled_files": 10,
+      "sampling_ratio": 0.0008
+    },
+    "australia_R1": {
+      "country": "australia",
+      "habitat_label": "R",
+      "split": "train",
+      "total_remote_files": 14287,
+      "sampled_files": 10,
+      "sampling_ratio": 0.0007
+    },
+    "indonesia_H4": {
+      "country": "indonesia",
+      "habitat_label": "H",
+      "split": "train",
+      "total_remote_files": 3414,
+      "sampled_files": 10,
+      "sampling_ratio": 0.0029
+    },
+    "indonesia_N1": {
+      "country": "indonesia",
+      "habitat_label": "N",
+      "split": "val",
+      "total_remote_files": 4063,
+      "sampled_files": 10,
+      "sampling_ratio": 0.0025
+    },
+    "indonesia_R1": {
+      "country": "indonesia",
+      "habitat_label": "R",
+      "split": "train",
+      "total_remote_files": 15477,
+      "sampled_files": 10,
+      "sampling_ratio": 0.0006
+    },
+    "kenya_H1": {
+      "country": "kenya",
+      "habitat_label": "H",
+      "split": "test",
+      "total_remote_files": 1060,
+      "sampled_files": 10,
+      "sampling_ratio": 0.0094
+    },
+    "kenya_N1": {
+      "country": "kenya",
+      "habitat_label": "N",
+      "split": "val",
+      "total_remote_files": 11954,
+      "sampled_files": 10,
+      "sampling_ratio": 0.0008
+    },
+    "maldives_D1": {
+      "country": "maldives",
+      "habitat_label": "D",
+      "split": "test",
+      "total_remote_files": 11538,
+      "sampled_files": 10,
+      "sampling_ratio": 0.0009
+    },
+    "maldives_N1": {
+      "country": "maldives",
+      "habitat_label": "N",
+      "split": "train",
+      "total_remote_files": 11481,
+      "sampled_files": 10,
+      "sampling_ratio": 0.0009
+    },
+    "mexico_N1": {
+      "country": "mexico",
+      "habitat_label": "N",
+      "split": "train",
+      "total_remote_files": 10206,
+      "sampled_files": 10,
+      "sampling_ratio": 0.001
+    },
+    "mexico_R1": {
+      "country": "mexico",
+      "habitat_label": "R",
+      "split": "train",
+      "total_remote_files": 10434,
+      "sampled_files": 10,
+      "sampling_ratio": 0.001
+    }
+  },
+  "loco_folds": {
+    "LOCO_australia": {
+      "held_out_country": "australia",
+      "train_sites": [
+        "indonesia_D1",
+        "indonesia_D2",
+        "indonesia_D3",
+        "indonesia_D4",
+        "indonesia_D5",
+        "indonesia_D6",
+        "indonesia_H1",
+        "indonesia_H2",
+        "indonesia_H3",
+        "indonesia_H4",
+        "indonesia_H5",
+        "indonesia_H6",
+        "indonesia_N1",
+        "indonesia_N2",
+        "indonesia_N3",
+        "indonesia_R1",
+        "indonesia_R2",
+        "indonesia_R3",
+        "indonesia_R4",
+        "indonesia_R5",
+        "indonesia_R6",
+        "kenya_D1",
+        "kenya_D2",
+        "kenya_H1",
+        "kenya_H2",
+        "kenya_N1",
+        "maldives_D1",
+        "maldives_D2",
+        "maldives_H1",
+        "maldives_H2",
+        "maldives_N1",
+        "mexico_D1",
+        "mexico_D2",
+        "mexico_H1",
+        "mexico_H2",
+        "mexico_H3",
+        "mexico_N1",
+        "mexico_R1"
+      ],
+      "test_sites": [
+        "australia_D1",
+        "australia_D2",
+        "australia_D3",
+        "australia_H1",
+        "australia_H2",
+        "australia_H3",
+        "australia_R1"
+      ]
+    },
+    "LOCO_indonesia": {
+      "held_out_country": "indonesia",
+      "train_sites": [
+        "australia_D1",
+        "australia_D2",
+        "australia_D3",
+        "australia_H1",
+        "australia_H2",
+        "australia_H3",
+        "australia_R1",
+        "kenya_D1",
+        "kenya_D2",
+        "kenya_H1",
+        "kenya_H2",
+        "kenya_N1",
+        "maldives_D1",
+        "maldives_D2",
+        "maldives_H1",
+        "maldives_H2",
+        "maldives_N1",
+        "mexico_D1",
+        "mexico_D2",
+        "mexico_H1",
+        "mexico_H2",
+        "mexico_H3",
+        "mexico_N1",
+        "mexico_R1"
+      ],
+      "test_sites": [
+        "indonesia_D1",
+        "indonesia_D2",
+        "indonesia_D3",
+        "indonesia_D4",
+        "indonesia_D5",
+        "indonesia_D6",
+        "indonesia_H1",
+        "indonesia_H2",
+        "indonesia_H3",
+        "indonesia_H4",
+        "indonesia_H5",
+        "indonesia_H6",
+        "indonesia_N1",
+        "indonesia_N2",
+        "indonesia_N3",
+        "indonesia_R1",
+        "indonesia_R2",
+        "indonesia_R3",
+        "indonesia_R4",
+        "indonesia_R5",
+        "indonesia_R6"
+      ]
+    },
+    "LOCO_kenya": {
+      "held_out_country": "kenya",
+      "train_sites": [
+        "australia_D1",
+        "australia_D2",
+        "australia_D3",
+        "australia_H1",
+        "australia_H2",
+        "australia_H3",
+        "australia_R1",
+        "indonesia_D1",
+        "indonesia_D2",
+        "indonesia_D3",
+        "indonesia_D4",
+        "indonesia_D5",
+        "indonesia_D6",
+        "indonesia_H1",
+        "indonesia_H2",
+        "indonesia_H3",
+        "indonesia_H4",
+        "indonesia_H5",
+        "indonesia_H6",
+        "indonesia_N1",
+        "indonesia_N2",
+        "indonesia_N3",
+        "indonesia_R1",
+        "indonesia_R2",
+        "indonesia_R3",
+        "indonesia_R4",
+        "indonesia_R5",
+        "indonesia_R6",
+        "maldives_D1",
+        "maldives_D2",
+        "maldives_H1",
+        "maldives_H2",
+        "maldives_N1",
+        "mexico_D1",
+        "mexico_D2",
+        "mexico_H1",
+        "mexico_H2",
+        "mexico_H3",
+        "mexico_N1",
+        "mexico_R1"
+      ],
+      "test_sites": [
+        "kenya_D1",
+        "kenya_D2",
+        "kenya_H1",
+        "kenya_H2",
+        "kenya_N1"
+      ]
+    },
+    "LOCO_maldives": {
+      "held_out_country": "maldives",
+      "train_sites": [
+        "australia_D1",
+        "australia_D2",
+        "australia_D3",
+        "australia_H1",
+        "australia_H2",
+        "australia_H3",
+        "australia_R1",
+        "indonesia_D1",
+        "indonesia_D2",
+        "indonesia_D3",
+        "indonesia_D4",
+        "indonesia_D5",
+        "indonesia_D6",
+        "indonesia_H1",
+        "indonesia_H2",
+        "indonesia_H3",
+        "indonesia_H4",
+        "indonesia_H5",
+        "indonesia_H6",
+        "indonesia_N1",
+        "indonesia_N2",
+        "indonesia_N3",
+        "indonesia_R1",
+        "indonesia_R2",
+        "indonesia_R3",
+        "indonesia_R4",
+        "indonesia_R5",
+        "indonesia_R6",
+        "kenya_D1",
+        "kenya_D2",
+        "kenya_H1",
+        "kenya_H2",
+        "kenya_N1",
+        "mexico_D1",
+        "mexico_D2",
+        "mexico_H1",
+        "mexico_H2",
+        "mexico_H3",
+        "mexico_N1",
+        "mexico_R1"
+      ],
+      "test_sites": [
+        "maldives_D1",
+        "maldives_D2",
+        "maldives_H1",
+        "maldives_H2",
+        "maldives_N1"
+      ]
+    },
+    "LOCO_mexico": {
+      "held_out_country": "mexico",
+      "train_sites": [
+        "australia_D1",
+        "australia_D2",
+        "australia_D3",
+        "australia_H1",
+        "australia_H2",
+        "australia_H3",
+        "australia_R1",
+        "indonesia_D1",
+        "indonesia_D2",
+        "indonesia_D3",
+        "indonesia_D4",
+        "indonesia_D5",
+        "indonesia_D6",
+        "indonesia_H1",
+        "indonesia_H2",
+        "indonesia_H3",
+        "indonesia_H4",
+        "indonesia_H5",
+        "indonesia_H6",
+        "indonesia_N1",
+        "indonesia_N2",
+        "indonesia_N3",
+        "indonesia_R1",
+        "indonesia_R2",
+        "indonesia_R3",
+        "indonesia_R4",
+        "indonesia_R5",
+        "indonesia_R6",
+        "kenya_D1",
+        "kenya_D2",
+        "kenya_H1",
+        "kenya_H2",
+        "kenya_N1",
+        "maldives_D1",
+        "maldives_D2",
+        "maldives_H1",
+        "maldives_H2",
+        "maldives_N1"
+      ],
+      "test_sites": [
+        "mexico_D1",
+        "mexico_D2",
+        "mexico_H1",
+        "mexico_H2",
+        "mexico_H3",
+        "mexico_N1",
+        "mexico_R1"
+      ]
+    }
+  }
+}

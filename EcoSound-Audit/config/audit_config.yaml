@@ -1,0 +1,46 @@
+# ============================================================
+# EcoSound-Audit Phase 1 Configuration
+# ============================================================
+# All values here are READ by audit_dataset.py.
+# Do NOT place API keys, tokens, or passwords in this file.
+# ============================================================
+
+dataset:
+  article_id: 29958062
+  doi: "10.5522/04/29958062.v2"
+  api_url: "https://api.figshare.com/v2/articles/29958062"
+  manifest_file_id: 57340871
+  kml_file_id: 57543862
+
+paths:
+  manifest_csv: "data/manifests/manifest.csv"
+  audit_summary: "reports/audit_summary.json"
+  audit_log: "logs/audit.log"
+
+http:
+  timeout_seconds: 30
+  max_retries: 3
+  retry_backoff_seconds: 5
+
+# Countries expected from prior knowledge (to be verified against actual data)
+expected_countries:
+  - australia
+  - indonesia
+  - kenya
+  - maldives
+  - mexico
+
+# Habitat label codes to verify from source documentation
+# These are candidates, NOT assumed ground truth
+candidate_habitat_codes:
+  - D
+  - H
+  - N
+  - R
+
+pilot:
+  # Controls for Audit D lightweight audio header inspection
+  # Set to false until remote inspection is explicitly attempted
+  run_audio_header_sample: false
+  # How many files to sample per site archive for header inspection (if run)
+  sample_n_per_archive: 3

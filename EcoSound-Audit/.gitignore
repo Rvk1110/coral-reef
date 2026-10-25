@@ -1,0 +1,23 @@
+# Audio archives – never commit
+data/archives/
+*.zip
+*.wav
+*.WAV
+*.flac
+*.mp3
+
+# Large downloads
+data/raw/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+.env
+venv/
+.venv/
+
+# Logs (keep structure, ignore content except committed audit logs)
+logs/*.log
+
+# macOS
+.DS_Store

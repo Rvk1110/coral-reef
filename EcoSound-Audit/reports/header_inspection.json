@@ -1,0 +1,1020 @@
+{
+  "inspection_timestamp_utc": "2026-10-25T05:43:46.732040+00:00",
+  "method": "HTTP Range requests, ZIP64-aware Central Directory parsing, WAV RIFF header inspection",
+  "archives_attempted": 13,
+  "archives_succeeded": 13,
+  "archives_failed": 0,
+  "sha256_check_for_unverified_md5_archives": {
+    "status": "complete",
+    "checked_archives": [
+      "detections_indonesia.zip",
+      "ind_R1.zip"
+    ],
+    "entries": {
+      "ind_R1.zip": {
+        "sha256_present": true,
+        "sha256_length": 64,
+        "sha256_value": "faf51da77eb2343b5b2cd59d6f7b7d67474df10491ffa95a67e55497de4694d4",
+        "file_count_in_manifest": "15477",
+        "integrity_assessment": "USABLE \u2014 64-character SHA256 hash present in manifest.csv. Empty computed_md5 in Figshare API reflects incomplete background checksumming, NOT a corrupt file. Verify with: shasum -a 256 ind_R1.zip"
+      },
+      "detections_indonesia.zip": {
+        "sha256_present": true,
+        "sha256_length": 64,
+        "sha256_value": "74cf02756f9f395be6ccc8bb7b8ac1683a0e2747bd28b6895b834ecea3396e3b",
+        "file_count_in_manifest": "587980",
+        "integrity_assessment": "USABLE \u2014 64-character SHA256 hash present in manifest.csv. Empty computed_md5 in Figshare API reflects incomplete background checksumming, NOT a corrupt file. Verify with: shasum -a 256 detections_indonesia.zip"
+      }
+    }
+  },
+  "archive_results": [
+    {
+      "archive": "aus_D1.zip",
+      "country": "australia",
+      "habitat_label": "D",
+      "file_id": 57340106,
+      "status": "success",
+      "is_zip64": true,
+      "file_size_bytes": 12986601091,
+      "cd_entries_count": 13738,
+      "wav_samples": [
+        {
+          "filename": "aus_D1_20230207_120000.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "aus",
+            "site_code": "D1",
+            "date": "2023-02-07",
+            "time_local": "12:00:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "aus_D1_20230226_135600.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "aus",
+            "site_code": "D1",
+            "date": "2023-02-26",
+            "time_local": "13:56:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "aus_D1_20230317_173200.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "aus",
+            "site_code": "D1",
+            "date": "2023-03-17",
+            "time_local": "17:32:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        }
+      ],
+      "errors": []
+    },
+    {
+      "archive": "aus_H2.zip",
+      "country": "australia",
+      "habitat_label": "H",
+      "file_id": 57340100,
+      "status": "success",
+      "is_zip64": true,
+      "file_size_bytes": 12678639190,
+      "cd_entries_count": 12630,
+      "wav_samples": [
+        {
+          "filename": "aus_H2_20230207_143200.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "aus",
+            "site_code": "H2",
+            "date": "2023-02-07",
+            "time_local": "14:32:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "aus_H2_20230225_033200.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "aus",
+            "site_code": "H2",
+            "date": "2023-02-25",
+            "time_local": "03:32:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "aus_H2_20230314_162800.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "aus",
+            "site_code": "H2",
+            "date": "2023-03-14",
+            "time_local": "16:28:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        }
+      ],
+      "errors": []
+    },
+    {
+      "archive": "aus_R1.zip",
+      "country": "australia",
+      "habitat_label": "R",
+      "file_id": 57340097,
+      "status": "success",
+      "is_zip64": true,
+      "file_size_bytes": 12523864070,
+      "cd_entries_count": 14287,
+      "wav_samples": [
+        {
+          "filename": "aus_R1_20230207_120000.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "aus",
+            "site_code": "R1",
+            "date": "2023-02-07",
+            "time_local": "12:00:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "aus_R1_20230227_081200.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "aus",
+            "site_code": "R1",
+            "date": "2023-02-27",
+            "time_local": "08:12:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "aus_R1_20230319_083200.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "aus",
+            "site_code": "R1",
+            "date": "2023-03-19",
+            "time_local": "08:32:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        }
+      ],
+      "errors": []
+    },
+    {
+      "archive": "ken_D1.zip",
+      "country": "kenya",
+      "habitat_label": "D",
+      "file_id": 57335987,
+      "status": "success",
+      "is_zip64": true,
+      "file_size_bytes": 4755857418,
+      "cd_entries_count": 4675,
+      "wav_samples": [
+        {
+          "filename": "ken_D1_20230222_124800.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "ken",
+            "site_code": "D1",
+            "date": "2023-02-22",
+            "time_local": "12:48:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "ken_D1_20230301_003600.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "ken",
+            "site_code": "D1",
+            "date": "2023-03-01",
+            "time_local": "00:36:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "ken_D1_20230307_122400.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "ken",
+            "site_code": "D1",
+            "date": "2023-03-07",
+            "time_local": "12:24:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        }
+      ],
+      "errors": []
+    },
+    {
+      "archive": "ken_H1.zip",
+      "country": "kenya",
+      "habitat_label": "H",
+      "file_id": 57335960,
+      "status": "success",
+      "is_zip64": false,
+      "file_size_bytes": 996864441,
+      "cd_entries_count": 1060,
+      "wav_samples": [
+        {
+          "filename": "ken_H1_20230222_130800.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "ken",
+            "site_code": "H1",
+            "date": "2023-02-22",
+            "time_local": "13:08:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "ken_H1_20230224_002800.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "ken",
+            "site_code": "H1",
+            "date": "2023-02-24",
+            "time_local": "00:28:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "ken_H1_20230225_114400.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "ken",
+            "site_code": "H1",
+            "date": "2023-02-25",
+            "time_local": "11:44:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        }
+      ],
+      "errors": []
+    },
+    {
+      "archive": "ken_N1.zip",
+      "country": "kenya",
+      "habitat_label": "N",
+      "file_id": 57336035,
+      "status": "success",
+      "is_zip64": true,
+      "file_size_bytes": 10166896545,
+      "cd_entries_count": 11954,
+      "wav_samples": [
+        {
+          "filename": "ken_N1_20230222_114000.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "ken",
+            "site_code": "N1",
+            "date": "2023-02-22",
+            "time_local": "11:40:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "ken_N1_20230311_020800.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "ken",
+            "site_code": "N1",
+            "date": "2023-03-11",
+            "time_local": "02:08:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "ken_N1_20230327_163200.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "ken",
+            "site_code": "N1",
+            "date": "2023-03-27",
+            "time_local": "16:32:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        }
+      ],
+      "errors": []
+    },
+    {
+      "archive": "mal_N1.zip",
+      "country": "maldives",
+      "habitat_label": "N",
+      "file_id": 57338294,
+      "status": "success",
+      "is_zip64": true,
+      "file_size_bytes": 9650535511,
+      "cd_entries_count": 11481,
+      "wav_samples": [
+        {
+          "filename": "mal_N1_20211024_174800.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.0
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "mal",
+            "site_code": "N1",
+            "date": "2021-10-24",
+            "time_local": "17:48:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920044
+        },
+        {
+          "filename": "mal_N1_20211109_162800.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.0
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "mal",
+            "site_code": "N1",
+            "date": "2021-11-09",
+            "time_local": "16:28:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920044
+        },
+        {
+          "filename": "mal_N1_20211125_151600.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.0
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "mal",
+            "site_code": "N1",
+            "date": "2021-11-25",
+            "time_local": "15:16:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920044
+        }
+      ],
+      "errors": []
+    },
+    {
+      "archive": "mal_D1.zip",
+      "country": "maldives",
+      "habitat_label": "D",
+      "file_id": 57338303,
+      "status": "success",
+      "is_zip64": true,
+      "file_size_bytes": 9794582123,
+      "cd_entries_count": 11538,
+      "wav_samples": [
+        {
+          "filename": "mal_D1_20211024_114800.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.0
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "mal",
+            "site_code": "D1",
+            "date": "2021-10-24",
+            "time_local": "11:48:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920044
+        },
+        {
+          "filename": "mal_D1_20211109_122800.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.0
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "mal",
+            "site_code": "D1",
+            "date": "2021-11-09",
+            "time_local": "12:28:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920044
+        },
+        {
+          "filename": "mal_D1_20211125_180800.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.0
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "mal",
+            "site_code": "D1",
+            "date": "2021-11-25",
+            "time_local": "18:08:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920044
+        }
+      ],
+      "errors": []
+    },
+    {
+      "archive": "mex_N1.zip",
+      "country": "mexico",
+      "habitat_label": "N",
+      "file_id": 57338882,
+      "status": "success",
+      "is_zip64": true,
+      "file_size_bytes": 8490302073,
+      "cd_entries_count": 10206,
+      "wav_samples": [
+        {
+          "filename": "mex_N1_20230528_132400.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "mex",
+            "site_code": "N1",
+            "date": "2023-05-28",
+            "time_local": "13:24:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "mex_N1_20230612_210800.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "mex",
+            "site_code": "N1",
+            "date": "2023-06-12",
+            "time_local": "21:08:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "mex_N1_20230628_090400.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "mex",
+            "site_code": "N1",
+            "date": "2023-06-28",
+            "time_local": "09:04:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        }
+      ],
+      "errors": []
+    },
+    {
+      "archive": "mex_R1.zip",
+      "country": "mexico",
+      "habitat_label": "R",
+      "file_id": 57338879,
+      "status": "success",
+      "is_zip64": true,
+      "file_size_bytes": 8222319561,
+      "cd_entries_count": 10434,
+      "wav_samples": [
+        {
+          "filename": "mex_R1_20230528_151200.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "mex",
+            "site_code": "R1",
+            "date": "2023-05-28",
+            "time_local": "15:12:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "mex_R1_20230612_223600.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "mex",
+            "site_code": "R1",
+            "date": "2023-06-12",
+            "time_local": "22:36:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "mex_R1_20230628_124000.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "mex",
+            "site_code": "R1",
+            "date": "2023-06-28",
+            "time_local": "12:40:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        }
+      ],
+      "errors": []
+    },
+    {
+      "archive": "ind_H4.zip",
+      "country": "indonesia",
+      "habitat_label": "H",
+      "file_id": 57334634,
+      "status": "success",
+      "is_zip64": false,
+      "file_size_bytes": 3504177379,
+      "cd_entries_count": 3414,
+      "wav_samples": [
+        {
+          "filename": "ind_H4_20220830_102200.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "ind",
+            "site_code": "H4",
+            "date": "2022-08-30",
+            "time_local": "10:22:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "ind_H4_20220901_191600.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "ind",
+            "site_code": "H4",
+            "date": "2022-09-01",
+            "time_local": "19:16:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "ind_H4_20220905_134200.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "ind",
+            "site_code": "H4",
+            "date": "2022-09-05",
+            "time_local": "13:42:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        }
+      ],
+      "errors": []
+    },
+    {
+      "archive": "ind_N1.zip",
+      "country": "indonesia",
+      "habitat_label": "N",
+      "file_id": 57334979,
+      "status": "success",
+      "is_zip64": false,
+      "file_size_bytes": 3276634953,
+      "cd_entries_count": 4063,
+      "wav_samples": [
+        {
+          "filename": "ind_N1_20220906_105800.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "ind",
+            "site_code": "N1",
+            "date": "2022-09-06",
+            "time_local": "10:58:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "ind_N1_20220909_064000.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "ind",
+            "site_code": "N1",
+            "date": "2022-09-09",
+            "time_local": "06:40:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "ind_N1_20220913_003400.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 25.599
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "ind",
+            "site_code": "N1",
+            "date": "2022-09-13",
+            "time_local": "00:34:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 819200
+        }
+      ],
+      "errors": []
+    },
+    {
+      "archive": "ind_R1.zip",
+      "country": "indonesia",
+      "habitat_label": "R",
+      "file_id": 57338165,
+      "status": "success",
+      "is_zip64": true,
+      "file_size_bytes": 14895000518,
+      "cd_entries_count": 15477,
+      "wav_samples": [
+        {
+          "filename": "ind_R1_20220829_092000.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "ind",
+            "site_code": "R1",
+            "date": "2022-08-29",
+            "time_local": "09:20:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "ind_R1_20220911_201800.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "ind",
+            "site_code": "R1",
+            "date": "2022-09-11",
+            "time_local": "20:18:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        },
+        {
+          "filename": "ind_R1_20220922_141800.WAV",
+          "wav_properties": {
+            "format": "PCM",
+            "audio_format_code": 1,
+            "channels": 1,
+            "sample_rate_hz": 16000,
+            "bits_per_sample": 16,
+            "byte_rate": 32000,
+            "approx_duration_s": 60.014
+          },
+          "timestamp_parsed": {
+            "parseable": true,
+            "country_code": "ind",
+            "site_code": "R1",
+            "date": "2022-09-22",
+            "time_local": "14:18:00"
+          },
+          "cd_compression": 8,
+          "cd_uncompressed_size_bytes": 1920488
+        }
+      ],
+      "errors": []
+    }
+  ]
+}
