@@ -1,0 +1,42 @@
+{
+  "status": "PASSED",
+  "timestamp_utc": "2026-10-25T13:02:26Z",
+  "test_file": "ken_H1_20230222_130800.WAV",
+  "archive": "ken_H1.zip",
+  "audio_specs": {
+    "channels": 1,
+    "sample_rate_hz": 16000,
+    "duration_s": 60.0,
+    "compressed_bytes_fetched": 793401,
+    "decompressed_pcm_bytes": 1920488
+  },
+  "pipeline_a_maad": {
+    "status": "PASSED",
+    "feature_vector_shape": [
+      5
+    ],
+    "feature_values": {
+      "ACI": 944.4373168945312,
+      "NDSI": 0.2734000086784363,
+      "ADI": 1.5577,
+      "BI": 242.9757,
+      "AEI": 0.4846
+    },
+    "ndsi_verification": {
+      "verified_parameter_names": {
+        "biophony": "flim_bioPh=(2000, 8000)",
+        "anthrophony": "flim_antroPh=(1000, 2000)",
+        "r_compatible": "soundecology"
+      },
+      "biophony_energy": 0.00064109,
+      "anthrophony_energy": 0.00036578,
+      "ratio_ba": 1.7526999711990356,
+      "ndsi_value": 0.2734000086784363,
+      "within_theoretical_bounds": true
+    },
+    "spectrogram_mode_verified": "psd",
+    "extraction_latency_seconds": 0.0466,
+    "zero_nans_infs": true
+  },
+  "total_remote_io_and_extraction_seconds": 6.628
+}
