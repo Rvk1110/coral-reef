@@ -251,3 +251,75 @@ def load_feature_cache(
 
     data = np.load(cache_file, allow_pickle=True)
     return data["features"], data["segment_ids"].tolist()
+
+
+# ---------------------------------------------------------------------------
+# Phase 5: Per-site shard I/O (does not touch pilot save_feature_cache above)
+# ---------------------------------------------------------------------------
+
+def save_feature_shard(
+    site_id: str,
+    segment_ids: List[str],
+    maad_matrix: np.ndarray,
+    yamnet_matrix: np.ndarray,
+    surfperch_matrix: np.ndarray,
+    shard_dir: Path,
+) -> Path:
+    """
+    Save per-site feature shard to Drive as a single compressed .npz file.
+    Contains all three representations and segment IDs for one site.
+
+    Parameters:
+    -----------
+    site_id         : e.g. "australia_D1"
+    segment_ids     : list of segment_id strings, length N_segs
+    maad_matrix     : float32 array, shape (N_segs, 5)
+    yamnet_matrix   : float32 array, shape (N_segs, 1024)
+    surfperch_matrix: float32 array, shape (N_segs, 1280)
+    shard_dir       : target directory on Drive
+
+    Returns path to the saved .npz file.
+    Does NOT overwrite an existing shard (caller checks first).
+    """
+    shard_dir = Path(shard_dir)
+    shard_dir.mkdir(parents=True, exist_ok=True)
+    out_path = shard_dir / f"{site_id}.npz"
+
+    if out_path.exists():
+        logger.warning("Shard already exists, skipping: %s", out_path)
+        return out_path
+
+    # Validate shapes before saving
+    n = len(segment_ids)
+    assert maad_matrix.shape == (n, 5),       f"maad shape mismatch: {maad_matrix.shape} vs ({n}, 5)"
+    assert yamnet_matrix.shape == (n, 1024),  f"yamnet shape mismatch: {yamnet_matrix.shape} vs ({n}, 1024)"
+    assert surfperch_matrix.shape == (n, 1280), f"surfperch shape mismatch: {surfperch_matrix.shape} vs ({n}, 1280)"
+
+    np.savez_compressed(
+        out_path,
+        segment_ids=np.array(segment_ids, dtype=object),
+        maad=maad_matrix.astype(np.float32),
+        yamnet=yamnet_matrix.astype(np.float32),
+        surfperch=surfperch_matrix.astype(np.float32),
+        site_id=np.array(site_id),
+    )
+    logger.info(
+        "Saved shard %s: %d segments, maad%s yamnet%s surfperch%s",
+        out_path.name, n, maad_matrix.shape, yamnet_matrix.shape, surfperch_matrix.shape
+    )
+    return out_path
+
+
+def load_feature_shard(shard_path: Path) -> Dict[str, Any]:
+    """
+    Load a per-site shard saved by save_feature_shard().
+    Returns dict with keys: segment_ids, maad, yamnet, surfperch, site_id.
+    """
+    data = np.load(shard_path, allow_pickle=True)
+    return {
+        "site_id": str(data["site_id"]),
+        "segment_ids": data["segment_ids"].tolist(),
+        "maad": data["maad"],         # (N, 5)
+        "yamnet": data["yamnet"],     # (N, 1024)
+        "surfperch": data["surfperch"],  # (N, 1280)
+    }

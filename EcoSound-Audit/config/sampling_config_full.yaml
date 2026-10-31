@@ -1,0 +1,87 @@
+# ============================================================
+# EcoSound-Audit — Phase 4 Configuration: Full Benchmark Sampling
+# ============================================================
+# Derived from config/sampling_config.yaml (pilot config).
+# ALL output paths redirect to data/sampling_full/ and reports/full/
+# so that pilot files (data/sampling/, reports/sampling_summary.json)
+# are NEVER overwritten.
+#
+# Phase 3.3 decision: Option A — 100 recordings per site, seed 42.
+# Logged in PHASE3_PLAN.md §12 and PHASES.md.
+# ============================================================
+pipeline:
+  name: "ecosound_phase4_full_benchmark"
+  random_seed: 42
+  version: "2.0.0"
+
+dataset:
+  article_id: 29958062
+  doi: "10.5522/04/29958062.v2"
+  api_url: "https://api.figshare.com/v2/articles/29958062"
+  manifest_file_id: 57340871
+  kml_file_id: 57543862
+
+paths:
+  # ── Read-only inputs (shared with pilot; never written) ──────────────────
+  manifest_csv: "data/manifests/manifest.csv"
+  figshare_files_json: "data/manifests/figshare_files.json"
+  study_sites_kml: "data/manifests/study_sites_map.kml"
+  # The frozen site split – read-only, never overwritten
+  site_metadata_csv: "data/sampling/site_metadata.csv"
+
+  # ── Full-benchmark outputs (all under data/sampling_full/) ───────────────
+  output_dir: "data/sampling_full"
+  recording_manifest_csv: "data/sampling_full/recording_manifest.csv"
+  sampled_dataset_csv: "data/sampling_full/sampled_recordings.csv"
+  segment_manifest_csv: "data/sampling_full/segment_manifest.csv"
+  shortfall_log_csv: "data/sampling_full/shortfall_log.csv"
+
+  # ── Full-benchmark reports (all under reports/full/) ────────────────────
+  sampling_summary_json: "reports/full/sampling_summary.json"
+  benchmark_summary_json: "reports/full/benchmark_summary.json"
+  benchmark_summary_md: "reports/full/benchmark_summary.md"
+  pipeline_log: "logs/sampling_full_pipeline.log"
+
+sampling:
+  # Sampling strategy: 2-D stratification across deployment date and hour-of-day.
+  strategy: "uniform_temporal"
+
+  # ── Phase 3.3 Option A decision ─────────────────────────────────────────
+  # 100 recordings per site; sites with fewer eligible recordings take all available.
+  target_samples_per_site: 100
+  # Kept for reference only; not used in full-benchmark run:
+  pilot_samples_per_site: 10
+
+  # Indonesia has a 1-in-2 min duty cycle (30 files/hr) vs 1-in-4 min (15/hr) elsewhere.
+  # "hourly_binning" selects equal numbers of files per diurnal-hour bin across sites,
+  # neutralising the recording-density difference without discarding files.
+  duty_cycle_handling: "hourly_binning"
+
+  # Files shorter than 50 s are excluded and logged in shortfall_log.csv.
+  # Files between 50 s and 60 s are zero-padded to 60 s during feature extraction.
+  min_duration_seconds: 50.0
+
+  # Segment parameters (for segment_manifest generation; no audio downloaded here).
+  segments_per_recording: 12
+  segment_duration_seconds: 5.0
+
+splits:
+  # Site-level split is FROZEN in data/sampling/site_metadata.csv.
+  # The pipeline must load that CSV and attach splits from it;
+  # it must NOT re-run create_site_level_splits().
+  use_frozen_split: true
+  frozen_split_csv: "data/sampling/site_metadata.csv"
+
+  # Ratios below are kept for documentation only:
+  train_ratio: 0.60
+  val_ratio: 0.20
+  test_ratio: 0.20
+
+  preserved_habitat_labels:
+    - "D"
+    - "H"
+    - "N"
+    - "R"
+
+  # Support Leave-One-Country-Out (LOCO) evaluation folds
+  enable_loco: true

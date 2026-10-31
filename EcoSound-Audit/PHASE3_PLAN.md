@@ -380,5 +380,24 @@ Before writing extraction code in Phase 3.2, the following methodological decisi
 
 ---
 
-*End of Revised Phase 3.1 Planning Document.*  
-*Awaiting user approval before proceeding to Phase 3.2.*
+*End of Revised Phase 3.1 Planning Document.*
+
+---
+
+## 12. Phase 3.3 Gate Decision — Benchmark Scale (logged 2026-10-31)
+
+| Parameter | Value |
+|---|---|
+| **Option selected** | **Option A — Full Scale** |
+| `TARGET_PER_SITE` | **100** recordings per site |
+| Total target recordings | 4,500 (45 sites × 100) |
+| Random seed | 42 |
+| Minimum duration filter | 50 s |
+| Segments per recording | 12 (non-overlapping 5-second windows) |
+| Indonesia duty-cycle handling | `hourly_binning` |
+| Stratification | 2-D: deployment date × hour-of-day |
+| Full config | `config/sampling_config_full.yaml` |
+
+**Rationale for Option A:** Provides maximal temporal coverage per site (vs. Option B's 50/site) while keeping the entire feature matrix well under 50 MB (≈ 45 MB for all three pipelines), which is safe for local MacBook Air M2 storage. Option B remains the documented fallback in case of Colab session timeout or CDN bandwidth throttling.
+
+> Phase 3.3 decision also recorded in `PHASES.md`.

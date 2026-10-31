@@ -1,0 +1,43 @@
+# EcoSound-Audit Phase 5 — Pinned Requirements for Google Colab
+# =============================================================
+# Install in Colab with:
+#   pip install -r requirements_phase5.txt
+#
+# Pinned on 2026-10-31 against Colab default runtime (Python 3.10, CUDA 12.x).
+# DO NOT change versions between Stage 1 and Stage 2.
+#
+# Tested environment: Google Colab with T4 GPU.
+
+# ── Audio I/O ──────────────────────────────────────────────────────────────
+soundfile==0.12.1
+scipy==1.11.4          # for resample_poly (polyphase 16→32 kHz)
+
+# ── Ecoacoustic Indices ────────────────────────────────────────────────────
+scikit-maad==1.4.3     # verified parameter names in smoke test (2026-10-26)
+
+# ── Deep Learning ─────────────────────────────────────────────────────────
+tensorflow==2.14.0     # YAMNet + SurfPerch both use TF2 SavedModel format
+tensorflow-hub==0.15.0 # TF Hub loader (YAMNet via hub.load)
+kagglehub==0.2.9       # SurfPerch model download (replaces deprecated kaggle-models)
+
+# ── Numerics / Data ───────────────────────────────────────────────────────
+numpy==1.24.4
+pandas==2.1.3
+
+# ── Colab-specific: Drive mount already available, no extra install needed ─
+# google-colab is pre-installed in the Colab runtime
+
+# ── Notes ─────────────────────────────────────────────────────────────────
+# YAMNet source: https://tfhub.dev/google/yamnet/1 (Apache 2.0)
+#   Input: 16 kHz mono float32 waveform in [-1, +1]
+#   Output: embeddings shape (T, 1024); T ≈ 10 frames per 5 s segment
+#   Pooling: temporal mean → (1024,) per segment [recorded in notebook]
+#
+# SurfPerch source: kaggle/google/surfperch/tensorFlow2/default (Apache 2.0)
+#   Input: 32 kHz mono float32, EXACTLY 160,000 samples (5.0 s)
+#   Output: (1, 1280) embedding; squeezed to (1280,) per segment
+#   Pooling: none needed (single vector per 5 s window) [recorded in notebook]
+#
+# scikit-maad: BSD-3 license
+#   Input: 16 kHz power spectrogram (mode='psd', nperseg=1024, noverlap=512)
+#   Bands: anthrophony 1–2 kHz, biophony 2–8 kHz (verified in smoke test)

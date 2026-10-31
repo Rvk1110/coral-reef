@@ -21,3 +21,22 @@ logs/*.log
 
 # macOS
 .DS_Store
+
+# ── Phase 5 additions ───────────────────────────────────────────────────────
+# Feature shards and matrices — stored in Drive only, never committed
+features/
+data/features/
+*.npz
+*.parquet
+*.h5
+*.hdf5
+
+# Kaggle model cache (downloaded at runtime, never committed)
+~/.cache/kagglehub/
+.kaggle/
+
+# Colab-generated output dirs
+drive/
+
+# Phase 5 per-site logs and failures
+logs/phase5/
